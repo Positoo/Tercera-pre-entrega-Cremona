@@ -2,13 +2,17 @@
 
 {% block contenidoQueCambia %}
 
-    <h1>Tittle of Cursos</h1>
+    <h1>Cursos</h1>
 
     <ul>
         {% for curso in lista_cursos %}
             <li>{{curso.nombre}} - {{curso.camada}}</li>
         {% endfor %}
     </ul>
+
+    <div style="margin-left: 3%">
+        <a class="btn btn-primary" href="/coderapp/curso-formulario/">Crear Nuevo</a>
+    </div>
 
 
 {% endblock contenidoQueCambia %}    

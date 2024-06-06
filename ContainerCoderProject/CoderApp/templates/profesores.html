@@ -2,7 +2,17 @@
 
 {% block contenidoQueCambia %}
 
-    <h1>Tittle of Profesores</h1>
+    <h1>Profesores</h1>
+
+    <ul>
+        {% for profesor in lista_profesores %}
+            <li>{{profesor.nombre}} - {{profesor.apellido}}</li>
+        {% endfor %}
+    </ul>
+
+    <div style="margin-left: 3%">
+        <a class="btn btn-primary" href="/coderapp/profesor-formulario/">Crear Nuevo</a>
+    </div>
 
 
 {% endblock contenidoQueCambia %}

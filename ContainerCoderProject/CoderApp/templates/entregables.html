@@ -2,7 +2,16 @@
 
 {% block contenidoQueCambia %}
 
-    <h1>Tittle of Entregables</h1>
+    <h1>Entregables</h1>
+    <ul>
+        {% for entregable in lista_entregables %}
+            <li>{{entregable.nombre}} - {{entregable.fechaDeEntrega}}</li>
+        {% endfor %}
+    </ul>
+
+    <div style="margin-left: 3%">
+        <a class="btn btn-primary" href="/coderapp/entregable-formulario/">Crear Nuevo</a>
+    </div>
 
 
 {% endblock contenidoQueCambia %}
